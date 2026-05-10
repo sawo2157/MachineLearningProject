@@ -1,5 +1,5 @@
 # MachineLearningProject
-Below is the project report created for my Machine Learning Project completed as part of coursework for MCEN 3030 - Computational Methods at CU Boulder. We were instructed to learn from an LLM on how to begin and then optimize initial models for a typical classification type machine learning problem. See seperate folders for code.
+Below is the project report created for my Machine Learning Project completed as part of coursework for MCEN 3030 - Computational Methods at CU Boulder. We were instructed to learn from an LLM on how to begin and then optimize initial models for a typical classification type machine learning problem. See seperate folders for code. Data sourced from: https://archive.ics.uci.edu/dataset/963/ur3+cobotops
 
 
 ## First Message to LLM (Chat GPT)
