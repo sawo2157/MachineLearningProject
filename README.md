@@ -56,14 +56,14 @@ After initial running, I spent a lot of time fine tuning the plots for readable 
 
 ### Confusion Matrix
 
-![Confusion Matrix of first iteration of model](code_1/confusionMatrix_v1.jpg)
+![Confusion Matrix of first iteration of model](Code1/confusionMatrix_v1.jpg)
 
 
 The model predicted no failure 2144 times, 2007 times correctly (~93.6%) and 137 times incorrectly (~6.4%). However, the model predicted failure 53 times, and was only correct 41 instances (~77.3%) and incorect 12 instances (~22.6%). Also there was 137 instances where the robot failed, and the model didn't actually predict it happening, which is more cases that the model actually predicts a failure - this is a major problem as we would rather have a predict a failure when it didn't actually happen then not predict failure at all and let the robot run itself into the ground. Intuitively, the model likes to simply predict no failure and knows it will be rather accurate as failures just don't happen often, it needs to be pushed to guess failure more but accurately of course. 
 
 ### Feature Importance Plot
 
-![Feature importance plot of first iteration of model](code_1/featureImportance_v1.jpg)
+![Feature importance plot of first iteration of model](Code1/featureImportance_v1.jpg)
 
 chatGPT summarizes the importance score as: "Feature importance reflects the sensitivity of model performance to disruption of individual predictors, measured via out-of-bag permutation. This provides a model-agnostic estimate of each variable’s contribution to predictive accuracy."
 
@@ -89,7 +89,7 @@ Then we created an adjustable decision threshold. The default threshold 0.5 stro
 
 ### Confusion Matrix
 
-![Confusion Matrix of first iteration of model](code_2/confusionMatrix_v2.jpg)
+![Confusion Matrix of first iteration of model](Code2/confusionMatrix_v2.jpg)
 
 Original features: 50 | Kept: 42 | Prunned: 8
 
@@ -103,6 +103,6 @@ The precision vs. recall tradeoff is real, but in the context of this problem ha
 
 ### Feature Importance Plot
 
-![Feature importance plot of first iteration of model](code_2/featureImportance_v2.jpg)
+![Feature importance plot of first iteration of model](Code2/featureImportance_v2.jpg)
 
 As in the previous model, similar features are near the top: the rolling mean of current in the second joint, total current etc. Joints 2 and 3 remain heavily important and the added advanced features seem to just add some solid additonal context for the model. Pruning the features reduced the noise that irrelevant features were creating for the model. Potentially the threshold for prunning could be reduced to 0.4, but prunning any features with some positive importance is never ideal. 
